@@ -132,7 +132,7 @@ Problems often ask for the minimum $x$ which satisfies the solution.
 It is possible to get all answers and take the minimum, or reduce the first found answer using [Euler's theorem](phi-function.md#application), but we can be smart about the order in which we calculate values and ensure the first answer we find is the minimum.
 
 ```{.cpp file=discrete_log}
-// Returns minimum x for which a ^ x % m = b % m, a and m are coprime.
+// Returns one of the x's for which a ^ x % m = b % m, a and m are coprime.
 int solve(int a, int b, int m) {
     a %= m, b %= m;
     int n = sqrt(m) + 1;
